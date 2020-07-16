@@ -256,13 +256,11 @@ const vis: Sankey = {
         switch (config.label_type) {
           case 'name':
             {
-              if (d.name == 'null' || d.name == null) return ``
-              else return `${d.name} (${d.value})`
+              return 'hello world' //`${d.name} (${d.value})`
             }
           case 'name_value':
             {
-              if (d.name != 'null') return `${d.name} (${d.value})`
-              else return ''
+              return 'hello world'  //if (d.name != 'null') return `${d.name} (${d.value})`
             }
           default:
             return ''
