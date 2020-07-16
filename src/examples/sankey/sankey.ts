@@ -255,7 +255,10 @@ const vis: Sankey = {
       .text(function (d: Cell) {
         switch (config.label_type) {
           case 'name':
-            return d.name
+            {
+              if (d.name == 'null' || d.name == null) return ``
+              else return `${d.name} (${d.value})`
+            }
           case 'name_value':
             {
               if (d.name != 'null') return `${d.name} (${d.value})`
