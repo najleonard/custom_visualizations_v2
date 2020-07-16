@@ -267,7 +267,7 @@ const vis: Sankey = {
           case 'name_value':
             {
               if (d.name != 'null') return `${d.name} (${d.value})`
-              else return ''
+              else return `(${d.value})`
             }
           default:
             return ''
