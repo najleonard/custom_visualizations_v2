@@ -237,14 +237,19 @@ const vis: Sankey = {
       })
       
 
+      
+      
     node.append('rect')
       .attr('x', function (d: Cell) { return d.x0 })
       .attr('y', function (d: Cell) { return d.y0 })
-      .attr('height', function (d: Cell) { return Math.abs(d.y1 - d.y0) })
+      .attr('height', function (d: Cell) { 
+        if (d.name != 'null') return Math.abs(d.y1 - d.y0) 
+        else return 0
+      })
       .attr('width', function (d: Cell) { return Math.abs(d.x1 - d.x0) })
       .attr('fill', function (d: Cell) { return color(d.name.replace(/ .*/, '')) })
       .attr('stroke', '#555')
-
+      
     node.append('text')
       .attr('x', function (d: Cell) { return d.x0 - 6 })
       .attr('y', function (d: Cell) { return (d.y1 + d.y0) / 2 })
