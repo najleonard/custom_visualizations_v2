@@ -103,7 +103,7 @@ const vis: Sankey = {
     let node = svg.append('g')
       .attr('class', 'nodes')
       .attr('font-family', 'sans-serif')
-      .attr('font-size', 10)
+      .attr('font-size', 12)
       .selectAll('g')
 
     const graph: any = {
