@@ -70,7 +70,7 @@ const vis: Sankey = {
     const svg = this.svg
       .html('')
       .attr('width', '100%')
-      .attr('height', '95%')
+      .attr('height', '100%')
       .append('g')
 
     const dimensions = queryResponse.fields.dimension_like
